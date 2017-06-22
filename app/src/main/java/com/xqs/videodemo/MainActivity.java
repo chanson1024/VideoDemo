@@ -1,33 +1,39 @@
 package com.xqs.videodemo;
 
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
+import com.xqs.videodemo.base.BaseActivity;
+import com.xqs.videodemo.base.BasePresenter;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    @BindView(R.id.nav_view)
+    NavigationView navigationView;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void initialize() {
+        ButterKnife.bind(this);
 
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        // 图标颜色
         navigationView.setItemTextColor(getResources().getColorStateList(R.drawable.nav_menu_text_color));
         navigationView.setItemIconTintList(getResources().getColorStateList(R.drawable.nav_menu_text_color));
+    }
+
+    @Override
+    protected int getContentViewLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected BasePresenter providerPresenter() {
+        return null;
     }
 
     @Override
