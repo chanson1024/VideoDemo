@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="border_overlay" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ParallaxScroll">
+        <attr name="parallax_factor" format="float"/>
+        <attr name="alpha_factor" format="float"/>
+        <attr name="inner_parallax_factor" format="float"/>
+        <attr name="parallax_views_num" format="integer"/>
+        <attr name="circular_parallax" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomToolbar">
+        <attr name="title" format="string"/>
+        <attr name="titleColor" format="color"/>
+        <attr name="right_text" format="string"/>
+        <attr name="backgroundColor" format="color"/>
+        <attr name="showNavigationBack" format="boolean"/>
+        <attr name="showBottomLine" format="boolean"/>
+    </declare-styleable>
+</resources>

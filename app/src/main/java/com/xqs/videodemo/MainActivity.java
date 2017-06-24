@@ -3,6 +3,7 @@ package com.xqs.videodemo;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.xqs.videodemo.base.BaseActivity;
@@ -11,8 +12,8 @@ import com.xqs.videodemo.base.BasePresenter;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends BaseActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
+    public static final String TAG = "MainActivity";
 
     @BindView(R.id.nav_view)
     NavigationView navigationView;
@@ -23,7 +24,7 @@ public class MainActivity extends BaseActivity
 
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setItemTextColor(getResources().getColorStateList(R.drawable.nav_menu_text_color));
-        navigationView.setItemIconTintList(getResources().getColorStateList(R.drawable.nav_menu_text_color));
+        navigationView.setItemIconTintList(null);
     }
 
     @Override
