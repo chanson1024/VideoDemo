@@ -18,8 +18,10 @@
         <attr name="title" format="string"/>
         <attr name="titleColor" format="color"/>
         <attr name="right_text" format="string"/>
-        <attr name="backgroundColor" format="color"/>
+        <attr name="background" format="reference"/>
         <attr name="showNavigationBack" format="boolean"/>
+        <attr name="translucentStatus" format="boolean"/>
         <attr name="showBottomLine" format="boolean"/>
+        <attr name="navigationBackIcon" format="reference"/>
     </declare-styleable>
 </resources>

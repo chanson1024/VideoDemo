@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <com.xqs.videodemo.widget.CustomToolbar
+        android:id="@+id/customToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="hhhhhh"/>
+        app:title="视频"
+        app:showNavigationBack="true"
+        app:navigationBackIcon="@mipmap/ic_nav_toggle"
+        app:background="@color/md_blue_400"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
